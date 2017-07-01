@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>About me</title>
+</head>
+<body>
+
+<div>
+  <p>Biking<br/>
+  <small> The ultimate adventure for clearing one's mind would have to be mountain biking. The freedom of it all is the best part. I love pushing myself until I hit every drop, do a perfect jump and weaving around trees at crazy speeds is such a thrill.
+  </small></p>
+</div>
+
+
+<div>
+  <p>Climbing<br/>
+  <small>Life is full of little hurdles and mishaps, but  if you keep working hard you can get to the top. Just remember don't let go! The interaction between muscles and rock allows you to get away from your routine and relieves all that stress.
+  </small></p>
+</div>
+
+<div>
+  <p>Coding<br/>
+  <small>Coding is a breath of fresh air. Being able to create something that wasn't there earlier in the day is very rewarding. Making programs for people and creating solutions to their problems is satisfying. Everyone has their own style of coding allowing programmers to express their creativeness through code.
+  </small></p>
+</div>
+
+<h1>I like beer so why not a beer selector</h1>
+
+<form name="Beer order" action="https://httpbin.org/post" method="post">
+ <fieldset>
+    <div>
+      <label>Customer Name:</label>
+      <input type="text" name="Name" placeholder="Hello special customer">
+    </div>
+  </fieldset>
+
+<fieldset>
+  <legend> Beer Size </legend>
+  <div>
+  <select name="Beer Size">
+    <option value="value1">Pint</option>
+    <option value="value2" selected>Bomber</option>
+    <option value="value3">Growler</option>
+  </select>
+  </div>
+</fieldset>
+
+<fieldset>
+<div>
+  <legend> Beer </legend>
+    <p><label> <input type=radio name=beer value="Pilsner">Pilsner</label></p>
+    <p><label> <input type=radio name=beer value="Stout">Stout</label></p>
+    <p><label> <input type=radio name=beer value="IPA">IPA</label></p>
+</div>
+
+<div>
+  <label>Special Instructions:</label>
+  <textarea name="Beer order"
+   rows="5" cols="50">Special requests!!</textarea>
+</div>
+
+  <div>
+    <label>Email:</label>
+    <input type="email" name="email">
+  </div>
+</fieldset>
+  <button type="submit">Order Beer</button>
+</form>
+
+<footer>
+  <nav>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="aboutme.html">About Me</a></li>
+    <li><a href="https://www.haystack.tv/">News</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </nav>
+</footer>
+</body>
+</html>
