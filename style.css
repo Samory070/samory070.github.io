@@ -9,20 +9,20 @@
   text-align: center;
 }
 
-.nav li {
+#nav li {
   list-style: none;
   display: inline;
 }
 
-.nav a {
+#nav a {
   color: #34B09E;
 }
 
-.nav li a:visited {
+#nav li a:visited {
     color: #EE2BCC;
 }
 
-.nav li a:hover {
+#nav li a:hover {
     color: #CC9B30;
 }
 
@@ -36,6 +36,7 @@
 .col-6 {
   width: 100%;
   float: left;
+  text-align: center;
 }
 
 .main-image, .contact-image {
@@ -56,6 +57,13 @@ img {
   max-width: 90%;
     }
 
+div legend {
+  margin: 0 auto;
+}
+
+form {
+  margin: 20px 10px 30px 20px;
+}
 body {
   background-color: #383838;
   left-margin: 20px auto;
@@ -81,19 +89,20 @@ small {
 
 /*Media query*/
 @media (max-width: 800px) {
- .col-3 {
-    width: 100%;
-  }
+
 }
 
 @media (max-width: 500px) {
  body {
     background-color: #bac2d1;
   }
-  small {
-    font-size: 2em;
+  .col-3 small {
+    font-size: .8em;
   }
-
+  .col-3 p {
+    width: 100%;
+    font-size: 3em;
+  }
 }
 
 
