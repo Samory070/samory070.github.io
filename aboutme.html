@@ -3,30 +3,47 @@
 <head>
   <meta charset="UTF-8">
   <title>About me</title>
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<div>
+<header>
+  <h1>Things I like</h1>
+</header>
+
+<div class="nav">
+<nav>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="aboutme.html">About Me</a></li>
+    <li><a href="https://www.haystack.tv/">News</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </nav>
+ </div>
+
+<div class="col-3">
   <p>Biking<br/>
   <small> The ultimate adventure for clearing one's mind would have to be mountain biking. The freedom of it all is the best part. I love pushing myself until I hit every drop, do a perfect jump and weaving around trees at crazy speeds is such a thrill.
   </small></p>
 </div>
 
 
-<div>
+<div class="col-3">
   <p>Climbing<br/>
   <small>Life is full of little hurdles and mishaps, but  if you keep working hard you can get to the top. Just remember don't let go! The interaction between muscles and rock allows you to get away from your routine and relieves all that stress.
   </small></p>
 </div>
 
-<div>
+<div class="col-3">
   <p>Coding<br/>
   <small>Coding is a breath of fresh air. Being able to create something that wasn't there earlier in the day is very rewarding. Making programs for people and creating solutions to their problems is satisfying. Everyone has their own style of coding allowing programmers to express their creativeness through code.
   </small></p>
 </div>
 
-<h1>I like beer so why not a beer selector</h1>
 
+
+<div class="col-6">
+<h1>I like beer so why not a beer selector!</h1>
 <form name="Beer order" action="https://httpbin.org/post" method="post">
  <fieldset>
     <div>
@@ -67,14 +84,8 @@
 </fieldset>
   <button type="submit">Order Beer</button>
 </form>
+</div>
 
-<footer>
-  <nav>
-    <li><a href="index.html">Home</a></li>
-    <li><a href="aboutme.html">About Me</a></li>
-    <li><a href="https://www.haystack.tv/">News</a></li>
-    <li><a href="contact.html">Contact</a></li>
-  </nav>
-</footer>
+
 </body>
 </html>
