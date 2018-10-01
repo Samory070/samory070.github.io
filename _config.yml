@@ -16,11 +16,11 @@
 username: Samory Harris
 email: samory070@gmail.com
 title: Full Stack Devloper
-description:  Samory is a 2017 graduate of Dev Bootcamp in New York City, where he was immersered in FullStack Development. Samory gained invaluable customer service skills and technical insights while working directly with customers at various retail companies. Samory holds a bachlors degree in Mechanical Enginering .
+description:  Samory is a 2017 graduate of Dev Bootcamp in New York City, where he was immersered in FullStack Development. Samory gained invaluable customer service skills and technical insights while working directly with customers at various retail companies. Samory holds a bachelors degree in Mechanical Enginering .
 categories: jeykyll
 permalink: ""
-baseurl: samory070.github.io
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: ""
+url: samory070.github.io
 twitter_username: twitter username
 github_username:  samory070
 
