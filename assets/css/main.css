@@ -1,29 +1,35 @@
 /*
 border-box adds padding and border total width of box
  */
-light green:#7ed56f
+light green: #7ed56f
 medium green: #55c57a
 dark green: #28b485
-* {
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
 }
 
+html {
+    font-size: 62.5%; /* set font size to %, divide 10 by 16 */
+}
 body {
+    box-sizing: border-box;
     font-family: 'Nunito', sans-serif;
     font-weight: 400;
-    font-size: 16px;
+    font-size: 1.6rem;
     line-height: 1.7;
     color: #666;
-    /* padding: 30px; */
+    padding: 3rem;
 
 }
 #header-intro{
     color: white;
 }
 
-#header-icons { font-size: 3rem; }
+.icon-box { font-size: 6rem; }
 
 .header {
     height: 95vh;
@@ -37,34 +43,34 @@ body {
 
 .header__logo-box {
     position: absolute;
-    top: 40px;
-    left: 40px;
+    top: 4rem;
+    left: 4rem;
 }
 
 .header__logo {
-    height: 35px;
+    height: 3.5rem;
 }
 
 .header__text-box {
-  color: #fff;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-45%, -45%); /* Shifted 50%(w x h) no longer related to parent element */
-  text-align: center;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-45%, -45%); /* Shifted 50%(w x h) no longer related to parent element */
+    text-align: center;
 }
 
 .header-primary {
     text-transform: uppercase;
     backface-visibility: hidden;
-    margin-bottom: 60px;
+    margin-bottom: 6rem;
 }
 
 .heading-primary--main {
     display: block;
-    font-size: 60px;
+    font-size: 6rem;
     font-weight: 500;
-    letter-spacing: 25px;
+    letter-spacing: 2.5rem;
 
     animation: moveInLeft 2s ease-out
       /* animation-delay: 1s; */
@@ -72,9 +78,9 @@ body {
 
 .heading-primary--sub {
     display: block;
-    font-size: 25px;
+    font-size: 2.5rem;
     font-weight: 400;
-    letter-spacing: 15.5px;
+    letter-spacing: 1.55rem;
 
     animation: moveInRight 2s ease-out;
     /* animation-delay: 1s; */
@@ -83,12 +89,12 @@ body {
 @keyframes moveInLeft {
     0% {
         opacity: 0;
-        transform: translateX(-100px);
+        transform: translateX(-10rem);
 
     }
 
     80% {
-        transform: translateX(10px);
+        transform: translateX(1rem);
     }
 
     100% {
@@ -100,12 +106,12 @@ body {
 @keyframes moveInRight {
     0% {
         opacity: 0;
-        transform: translateX(100px);
+        transform: translateX(10rem);
 
     }
 
     80% {
-        transform: translateX(-10px);
+        transform: translateX(-1rem);
     }
 
     100% {
@@ -117,7 +123,7 @@ body {
 @keyframes moveInButton {
     0% {
         opacity: 0;
-        transform: translateY(30px);
+        transform: translateY(3rem);
 
     }
 
@@ -130,21 +136,21 @@ body {
 .btn:visited {
     text-transform: uppercase;
     text-decoration: none;
-    padding: 15px 40px;
+    padding: 1.5rem 4rem;
     display: inline-block;
-    border-radius: 100px;
+    border-radius: 10rem;
     transition: all .2s;
     position: relative;
 }
 
 .btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25)
+    transform: translateY(-.2rem);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25)
 }
 
 .btn:active {
-    transform: translateY(-2px);
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25)
+    transform: translateY(-.2rem);
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.25)
 }
 
 .btn-white {
@@ -152,12 +158,12 @@ body {
     color: #777
 }
 
-.btn:after {
+.btn::after {
   content: ''; /* has to */
     display: inline-block;
     height: 100%;
     width: 100%;
-    border-radius: 100px;
+    border-radius: 1rem;
     position: absolute;
     top: 0;
     left: 0;
@@ -166,15 +172,54 @@ body {
 }
 
 .btn-white::after {
-  background-color: #fff
+    background-color: #fff
 }
 
 .btn:hover::after {
-  transform: scaleX(1.4) scaleY(1.6);
-  opacity: 0;
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0;
 }
 
-.btn-animate {
-  animation: moveInButton .5s ease-out .75s;
-  animation-fill-mode: backwards; 
+.btn--animate {
+    animation: moveInButton .5s ease-out .75s;
+    animation-fill-mode: backwards;
+}
+
+nav {
+    background-color: #96f400;
+    margin: 3rem;
+}
+
+media-box {
+  float: left;
+}
+
+/* .media-box li {
+    list-style: none;
+    display: inline-block;
+    margin: 3;
+}
+
+.media-box li:first-child {
+    margin: 0;
+}
+
+.media-box li a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #666;
+} */
+
+
+nav::after {
+    content: '';
+    clear: both;
+    display: table;
+}
+
+.footer-box {
+    margin-top: 10rem;
+    background-color: #333;
+    text-align: center;
+    height: 5vh;
 }

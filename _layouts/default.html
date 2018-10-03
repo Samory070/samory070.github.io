@@ -2,22 +2,23 @@
 <html lang="en">
     <head>
       {% include head.html %}
-
     </head>
+
     <body>
 
-      {% include header.html %}
-          <section>
-              <h1>section 1</h1>
+        {% include header.html %}
 
-              {% include about.html %}
-          </section>
+        <section>
+            <h1>section 1</h1>
+            {% include nav.html %}
+        </section>
 
-          <section>
-              <h1>section 2</h1>
-
-              {% include projects.html %}
-          </section>
-
+        <section>
+            <h1>section 2</h1>
+            {% include projects.html %}
+        </section>
+        <div>
+            {% include footer.html %}    
+        </div>
     </body>
 </html>
