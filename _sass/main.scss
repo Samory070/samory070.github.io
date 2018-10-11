@@ -1,3 +1,8 @@
+// @import 'base'
+// @import 'comopnents'
+// @import 'layouts'
+// @import 'modules'
+
 // @mixin clearfix {
 //
 // }
@@ -5,22 +10,29 @@
 // @include clearfix
 
 $color-primary-light: #7ed56f;
-$color-secondary-medium: #55c57a;
-$color-dark-green: #28b485;
-$color-light-grey: #999;
-$color-medium-grey: #666;
-$color-dark-grey: #333;
-$color-grey: #111;
+$color-priamry-medium: #55c57a;
+$color-primary-dark: #28b485;
+
+$color-secondary-light: #ffbf00;
+$color-secondary-dark: #ff6b00;
+
+$color-blue-light: #00bde7;
+$color-blue-dark: #03576a;
+
+
+$color-grey-light: #999;
+$color-grey-medium: #777;
+$color-grey-dark: #333;
+$color-black: #000;
 $color-white: #fff;
-$color-red: #fe0000;
-$color-light-blue: rgba(0, 189, 231, 0.7);
-$color-dark-blue: rgba(3, 87, 106, 0.7);
+
 
 
 /*
 border-box adds padding and border total width of box
  */
 
+//RESET
 *,
 *::after,
 *::before {
@@ -38,19 +50,21 @@ body {
     font-weight: 400;
     font-size: 1.6rem;
     line-height: 1.7;
-    color: #666;
+    color: $color-grey-medium;
     padding: 3rem;
 
 }
+
+// HEADER
 #header-intro{
-    color: white;
+    color: $color-white;
 }
 
 .icon-box { font-size: 6rem; }
 
 .header {
     height: 95vh;
-    background-image: linear-gradient(to right bottom, rgba(36, 231, 0, 0.7), rgba(40, 180, 133, 0.7) ), url("/assets/img/colorado.jpg");
+    background-image: linear-gradient(to right bottom, rgba($color-primary-light, 0.7), rgba($color-primary-dark, 0.7)), url("/assets/img/colorado.jpg");
     background-size: cover;
     background-position: top;
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 90vh, 5% 100%);
@@ -69,7 +83,7 @@ body {
 }
 
 .header__text-box {
-    color: #fff;
+    color: $color-white;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -149,6 +163,8 @@ body {
         transform: translate(0);
     }
 }
+
+// BUTTON
 .btn:link,
 .btn:visited {
     text-transform: uppercase;
@@ -162,30 +178,30 @@ body {
 
 .btn:hover {
     transform: translateY(-.2rem);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25)
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.25);
 }
 
 .btn:active {
     transform: translateY(-.2rem);
-    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.25)
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.25);
 }
 
 .btn-white {
-    background-color: #fff;
-    color: #777
+    background-color: $color-white;
+    color: $color-grey-medium ;
 }
 
 .btn::after {
-  content: ''; /* has to */
+  content: '';
     display: inline-block;
     height: 100%;
     width: 100%;
-    border-radius: 1rem;
+    border-radius: 10rem;
     position: absolute;
     top: 0;
     left: 0;
     z-index: -1;
-    transition: .4s;
+    transition: all .4s;
 }
 
 .btn-white::after {
@@ -201,42 +217,161 @@ body {
     animation: moveInButton .5s ease-out .75s;
     animation-fill-mode: backwards;
 }
+.navigation {
+    &__checkbox {
+      display: none;
+    }
+    &__button {
+      color: $color-white;
+      height: 7rem;
+      width: 7rem;
+      position: fixed;
+      top: 6rem;
+      right: 6rem;
+      border-radius: 50%;
+      z-index: 2000;
+    }
+    &__backgound {
+      height: 6rem;
+      width: 6rem;
+      border-radius: 50%;
+      position: fixed;
+      top: 6.5rem;
+      right: 6.5rem;
+      background-image: radial-gradient($color-blue-light, $color-blue-dark);
+      z-index: 1000;
+      transform: scale(50);
+    }
+    &__nav {
+      height: 100vh;
+      width: 100vh;
+      position: fixed;
+      top: 0;
+      right: 0;
+      z-index: 1500;
+    }
+    &__list {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      list-style: none;
+      text-align: center;
+    }
+    &__item {
+      margin: 1rem;
+    }
+    &__link {
+      &:link,
+      &:visited {
+        display: inline-block;
+          font-size: 3rem;
+          font-weight: 400;
+          padding: 1rem 2rem;
+          color: $color-white;
+          text-decoration: none;
+          text-transform: uppercase;
+          background-image: linear-gradient(120deg, transparent 0%, transparent 50%, $color-white 50% );
+          background-size: 230%;
+          transition: all .4s;
+      }
+      &:hover,
+      &:active {
+          background-position: 100%;
+          color: $color-priamry-medium;
+          translae: 1rem;
+      }
 
-nav {
-    background-color: #96f400;
-    margin: 3rem;
+    }
 }
+// .navigation__nav {
+//   margin: 3rem;
+//   &:hover {
+//     color: $color-blue-light;
+//   }
+// }
+//
+// .navigation__nav::after {
+//   content: '';
+//   clear: both;
+//   display: table;
+// }
+//
+// .navigation__list {
+//   float: left;
+// }
+//
+//  .navigation__list li {
+//     list-style: none;
+//     display: inline-block;
+//     margin: 3;
+// }
+//
+// .navigation__list li:first-child {
+//     margin: 0;
+// }
+//
+// .navigation__list li a {
+//     text-decoration: none;
+//     text-transform: uppercase;
+//     color: $color-grey-medium;
+// }
 
-media-box {
-  float: left;
-}
-
-/* .media-box li {
-    list-style: none;
-    display: inline-block;
-    margin: 3;
-}
-
-.media-box li:first-child {
-    margin: 0;
-}
-
-.media-box li a {
-    text-decoration: none;
-    text-transform: uppercase;
-    color: #666;
-} */
 
 
-nav::after {
-    content: '';
-    clear: both;
-    display: table;
-}
-
+// FOOTER
 .footer-box {
     margin-top: 10rem;
-    background-color: #333;
+    background-color: $color-grey-dark;
     text-align: center;
     height: 5vh;
+}
+
+
+
+//PROJECTS
+
+.project-box {
+    background-color: rgba($color-white, .8);
+    font-size: 1.5rem;
+    padding: 2.5rem;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
+    transition: transform .3s;
+    // transform: skewY(7);
+
+    &__icon {
+        font-size: 6rem;
+        margin-bottom: .5rem;
+        display: inline-block;
+        background-image: linear-gradient(to right, $color-blue-light, $color-blue-dark);
+        -webkit-background-clip: text;
+        color: transparent;
+    }
+    &:hover {
+        transform: translateY(1.5rem) scale(1.03);
+    }
+}
+
+
+// SECTION
+.section-projects {
+  padding: 20rem 0;
+  background-image: linear-gradient(to right bottom, rgba($color-blue-light, 0.7), rgba($color-blue-dark, 0.7)), url("/assets/img/brooklyn_bridge.jpg");
+  background-size: cover;
+  transform: skewY(-7deg);
+  margin-top: -10vh;
+
+  & > * {
+    transform: skewY(7deg);
+  }
+}
+
+.section-about {
+  background-color: $color-grey-light;
+  color: $color-white;
+  padding: 25rem 0;
+  margin-top: 15vh;
+  text-align: center;
 }

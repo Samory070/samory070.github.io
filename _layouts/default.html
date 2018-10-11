@@ -6,19 +6,22 @@
 
     <body>
 
-        {% include header.html %}
-
-        <section>
-            <h1>section 1</h1>
+        <section class="section-nav">
             {% include nav.html %}
         </section>
 
-        <section>
-            <h1>section 2</h1>
+        {% include header.html %}
+
+        <section class="section-about">
+            {% include about.html %}
+        </section>
+
+        <section class="section-projects">
             {% include projects.html %}
         </section>
-        <div>
-            {% include footer.html %}    
-        </div>
+
+        <section class="footer">
+            {% include footer.html %}
+        </section >
     </body>
 </html>
