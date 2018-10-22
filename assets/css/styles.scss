@@ -1,4 +1,8 @@
 ---
 ---
 
-@import 'main'
+@import 'main';
+@import "base/dir-base";
+@import "components/dir-components";
+@import "modules/dir-modules";
+@import "abstracts/dir-abstracts";

@@ -1,5 +1,53 @@
-.btn:link,
-.btn:visited {
+// KEYFRAMES
+@keyframes moveInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-10rem);
+
+    }
+
+    80% {
+        transform: translateX(1rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+@keyframes moveInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(10rem);
+
+    }
+
+    80% {
+        transform: translateX(-1rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+@keyframes moveInButton {
+    0% {
+        opacity: 0;
+        transform: translateY(3rem);
+
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+// BUTTON
+.btn, .btn:link, .btn:visited {
     text-transform: uppercase;
     text-decoration: none;
     padding: 1.5rem 4rem;
@@ -7,25 +55,37 @@
     border-radius: 10rem;
     transition: all .2s;
     position: relative;
+    font-size: 1.6rem;
+    border: none;
+    cursor: pointer;
 }
 
 .btn:hover {
-    transform: translateY(-.2rem);
+    transform: translateY(-3px);
     box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.25);
+    .btn:hover::after {
+      transform: scaleX(1.4) scaleY(1.6);
+      opacity: 0;
+    }
 }
 
-.btn:active {
-    transform: translateY(-.2rem);
+.btn:active, .btn:focus {
+    outline: none;
+    transform: translateY(-1px);
     box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.25);
+
 }
 
 .btn-white {
     background-color: $color-white;
     color: $color-grey-medium ;
+    .btn-white::after {
+      background-color: $color-white;
+    }
 }
 
 .btn::after {
-  content: '';
+    content: '';
     display: inline-block;
     height: 100%;
     width: 100%;
@@ -37,16 +97,39 @@
     transition: all .4s;
 }
 
-.btn-white::after {
-    background-color: #fff
-}
-
-.btn:hover::after {
-    transform: scaleX(1.4) scaleY(1.6);
-    opacity: 0;
-}
-
 .btn--animate {
     animation: moveInButton .5s ease-out .75s;
     animation-fill-mode: backwards;
 }
+.fa-bars {
+    line-height: 6.5rem;
+    font-size: 25rem;
+    
+}
+.fa-arrow-down {
+    font-size: 2.5rem;
+    transition: .7s;
+
+}
+//
+// .btn-text:link, .btn-text:visited, {
+//     font-size: 1.6rem;
+//     color: #55c57a;
+//     display: inline-block;
+//     text-decoration: none;
+//     border-bottom: 1px solid #55c57a;
+//     padding: 3px;
+//     transition: all .2s;
+// }
+//
+// .btn-text:hover {
+//     background-color: #55c57a;
+//     color: $color-white;
+//     box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+//     transform: translateY(-2px);
+// }
+//
+// .btn-text:active {
+//     box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.15);
+//     transform: translateY(0);
+// }
