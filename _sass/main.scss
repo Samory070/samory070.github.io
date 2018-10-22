@@ -34,16 +34,35 @@ $color-white: #fff;
 
 
 html {
-    font-size: 62.5%; /* set font size to %, divide 10 by 16 */
+    font-size: 62.5%; /* set font size to %, divide 10 by 16, 1rem =  10px */
 
     // @media (max-width: 600px) {
-    //     font-size: 50%;
-    // }
-    // @media (max-width: 00px) {
-    //     font-size: 50%;
-    // }
-    @include respond-phone {
-      font-size: 50%
+    //     html {
+    //       font-size: 50%; } }
+    //
+    // @media (max-width: 900px) {
+    //     html {
+    //       font-size: 60%; } }
+    //
+    // @media (max-width: 1200px) {
+    //     html {
+    //       font-size: 70%; } }
+    //
+    // @media (min-width: 1800px) {
+    //     html {
+    //       font-size: 80%; } }
+
+    @include respond(tab-land) {
+      font-size: 56.25%; // 1rem = 9px, 9/16 = 50%
+    }
+    @include respond(tab-port) {
+      font-size: 50%; //1rem = 8px, 8/16 = 50%
+    }
+    @include respond(phone) {
+      font-size: 30%;
+    }
+    @include respond(big-desktop) {
+      font-size: 75%; //1rem = 12, 12/16
     }
 }
 body {
