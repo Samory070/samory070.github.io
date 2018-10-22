@@ -1,0 +1,16 @@
+@mixin absCenter {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+ // MEDIA QUERIES
+// 0-600px phone
+// 600-900px tablet
+// 900-1200 tablet landscape
+// [1200-1600] normal styles applied
+// 1800 px + desktop
+
+@mixin respond-phone {
+  @media(max-width: 600) { @content }
+}

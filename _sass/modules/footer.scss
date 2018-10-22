@@ -1,0 +1,16 @@
+
+
+
+// FOOTER
+.footer-box {
+  // display: inline-block;
+  font-size: 2rem;
+  color: $color-white;
+  margin-top: 10rem;
+  background-color: $color-grey-dark;
+  text-align: center;
+  height: 10vh;
+  &__copyright {
+    @include absCenter
+  }
+}

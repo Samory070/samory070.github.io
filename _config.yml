@@ -1,0 +1,55 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely edit after that. If you find
+# yourself editing this file very often, consider using Jekyll's data files
+# feature for the data you need to update frequently.
+#
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
+
+# Site settings
+# These are used to personalize your new site. If you look in the HTML files,
+# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
+# You can create any custom variable you would like, and they will be accessible
+# in the templates via {{ site.myvariable }}.
+username: Samory Harris
+email: samory070@gmail.com
+title: Full Stack Devloper
+description:  Samory is a 2017 graduate of Dev Bootcamp in New York City, where he was immersered in FullStack Development. Samory gained invaluable customer service skills and technical insights while working directly with customers at various retail companies. Samory holds a bachelors degree in Mechanical Enginering .
+categories: jeykyll
+permalink: ""
+baseurl: ""
+url: samory070.github.io
+twitter_username: twitter username
+github_username:  https://github.com/Samory070
+linkedin_username: https://www.linkedin.com/in/samory-harris-54a889100/
+
+# Build settings
+markdown: kramdown
+theme: minima
+plugins:
+  - jekyll-feed
+
+sass:
+  sass_dir: ./_sass
+  style: compressed
+
+# defaults:
+#   -
+#     scope:
+#       path: ''
+#       type: 'posts'
+#     values:
+#       layout: post
+# Exclude from processing.
+# The following items will not be processed, by default. Create a custom list
+# to override the default setting.
+# exclude:
+#   - Gemfile
+#   - Gemfile.lock
+#   - node_modules
+#   - vendor/bundle/
+#   - vendor/cache/
+#   - vendor/gems/
+#   - vendor/ruby/
