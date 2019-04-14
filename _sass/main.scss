@@ -75,6 +75,15 @@ body {
     padding: 3rem;
 
 }
+.status {
+  padding: 1rem;
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-color: $color-grey-dark;
+  color: #FFF;
+  z-index: 900;
+}
 
 
 // SECTION
